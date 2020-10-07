@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace PromotionEngine.Entities
 {
@@ -11,5 +10,6 @@ namespace PromotionEngine.Entities
         public static decimal APromotionPrice = 130m;
         public static decimal BPromotionPrice = 45m;
         public static decimal CDPromotionPrice = 30m;
+        public static bool CheckSkuId(string skuId) => SKUIDs.Contains(skuId);
     }
 }
