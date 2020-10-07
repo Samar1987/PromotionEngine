@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace PromotionEngine.Products
 {
-    class CProductPack
+    public class CProductPack: IProductPack
     {
+        public int ProductCount { get; set; }
+        public decimal ProductPrice { get; set; }
+
+        public decimal GetTotalPrice() => ProductCount * ProductPrice;
     }
 }
