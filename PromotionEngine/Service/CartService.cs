@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using PromotionEngine.Entities;
 using PromotionEngine.Products;
+using PromotionEngine.PromotionTypes;
 
 namespace PromotionEngine.Service
 {
