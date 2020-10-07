@@ -2,7 +2,7 @@
 
 namespace PromotionEngine
 {
-    public class CartService
+    public class UserCart
     {
         static void Main(string[] args)
         {
