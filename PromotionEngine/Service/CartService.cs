@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PromotionEngine.Entities;
+using PromotionEngine.Products;
 
 namespace PromotionEngine.Service
 {
