@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PromotionEngine.Entities;
+using PromotionEngine.Service;
 using System;
 
 namespace CartServiceTest
