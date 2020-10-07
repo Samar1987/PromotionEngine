@@ -13,7 +13,7 @@ namespace PromotionEngine
             int totalOreder = Convert.ToInt32(Console.ReadLine());
 
 
-            // [Interface Repository pattern]
+            // [Interface Repository pattern] Which can be provided as dependent service to client class using DI.
             ICartService _cart = new CartService();
 
             for (int i = 0; i < totalOreder; i++)
@@ -21,11 +21,13 @@ namespace PromotionEngine
                 Console.WriteLine("Enter the product type");
                 string productType = Console.ReadLine();
                
+                // Adding the Products having SKUIDs -> A, B, C, D.
                 Product prod = new Product { Id = productType };
                 _cart.AddProduct(prod);
             }
 
 
+            // Getting the Total Order price.
             decimal totalPrice = _cart.GetWholeOrderTotalPrice();
             Console.WriteLine("=========================================");
             Console.WriteLine("Your Total Order Value: {0}", totalPrice);
