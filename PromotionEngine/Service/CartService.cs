@@ -7,19 +7,32 @@ namespace PromotionEngine.Service
     //This "Cart Service" handles the adding of products to order list and calculating the whole order's value. 
     public class CartService: ICartService
     {
+        //In future, we can add new product pack AND\OR promotion type here based on business need.
+        AProdPromotion APromoPack = new AProdPromotion();
+        BProdPromotion BPromoPack = new BProdPromotion();
+        CProductPack CPack = new CProductPack();
+        DProductPack DPack = new DProductPack();
 
         //Adding the products to order list with their Count and Price values, based upon SKU Id value.
         public void AddProduct(Product prod)
         {
             switch (prod.Id)
             {
-                case "A":                  
+                case "A":
+                    APromoPack.ProductCount++;
+                    APromoPack.ProductPrice = 50m;
                     break;
-                case "B":                   
+                case "B":
+                    BPromoPack.ProductCount++;
+                    BPromoPack.ProductPrice = 30m;
                     break;
-                case "C":                    
+                case "C":
+                    CPack.ProductCount++;
+                    CPack.ProductPrice = 20m;
                     break;
-                case "D":                    
+                case "D":
+                    DPack.ProductCount++;
+                    DPack.ProductPrice = 15m;
                     break;
             };
         }
