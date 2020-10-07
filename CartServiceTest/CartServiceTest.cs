@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace CartServiceTest
 {
@@ -20,18 +21,15 @@ namespace CartServiceTest
             Product prod;
 
             // Adding 1 A Type Product.
-            prod = new Product();
-            prod.Id = "A";
+            prod = new Product { Id = "A" };
             _cartService.AddProduct(prod);
 
             // Adding 1 B Type Product.
-            prod = new Product();
-            prod.Id = "B";
+            prod = new Product { Id = "B" };
             _cartService.AddProduct(prod);
 
             // Adding 1 C Type Product.
-            prod = new Product();
-            prod.Id = "C";
+            prod = new Product { Id = "C" };
             _cartService.AddProduct(prod);
 
             // Act
@@ -59,22 +57,19 @@ namespace CartServiceTest
             // Adding 5 A Type Product.
             for (int i = 0; i < 5; i++)
             {
-                prod = new Product();
-                prod.Id = "A";
+                prod = new Product { Id = "A" };
                 _cartService.AddProduct(prod);
             }
 
             // Adding 5 B Type Product.
             for (int i = 0; i < 5; i++)
             {
-                prod = new Product();
-                prod.Id = "B";
+                prod = new Product { Id = "B" };
                 _cartService.AddProduct(prod);
             }
 
             // Adding 1 C Type Product.
-            prod = new Product();
-            prod.Id = "C";
+            prod = new Product { Id = "C" };
             _cartService.AddProduct(prod);
 
             // Act                        
@@ -103,22 +98,19 @@ namespace CartServiceTest
             // Adding 3 A Type Product.
             for (int i = 0; i < 3; i++)
             {
-                prod = new Product();
-                prod.Id = "A";
+                prod = new Product { Id = "A" };
                 _cartService.AddProduct(prod);
             }
 
             // Adding 5 B Type Product.
             for (int i = 0; i < 5; i++)
             {
-                prod = new Product();
-                prod.Id = "B";
+                prod = new Product { Id = "B" };
                 _cartService.AddProduct(prod);
             }
 
             // Adding 1 D Type Product.
-            prod = new Product();
-            prod.Id = "D";
+            prod = new Product { Id = "D" };
             _cartService.AddProduct(prod);
 
             // Act                        
