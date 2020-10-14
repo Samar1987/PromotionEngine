@@ -16,8 +16,9 @@ namespace PromotionEngine.Service
         IProductPack CPack;
         IProductPack DPack;
 
-        public CartService() 
+        public CartService()
         {
+            // Loosly coupled product modules/classes as here is no "new" keyword to create module/class object.
             APromoPack = ProductFactory.GetProductPack("A");
             BPromoPack = ProductFactory.GetProductPack("B");
             CPack = ProductFactory.GetProductPack("C");

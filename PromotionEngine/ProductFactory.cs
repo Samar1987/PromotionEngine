@@ -5,10 +5,10 @@ namespace PromotionEngine
 {
     public class ProductFactory
     {
-        public static IProductPack GetProductPack(string SkuId) 
+        public static IProductPack GetProductPack(string SkuId)
         {
             IProductPack prodPack = null;
-            switch (SkuId) 
+            switch (SkuId)
             {
                 case "A":
                     prodPack = new AProdPromotion();
