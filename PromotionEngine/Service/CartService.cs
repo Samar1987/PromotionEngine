@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using PromotionEngine.Entities;
 using PromotionEngine.Products;
 using PromotionEngine.PromotionTypes;
+using System.Reflection.PortableExecutable;
 
 namespace PromotionEngine.Service
 {
@@ -10,21 +11,29 @@ namespace PromotionEngine.Service
     public class CartService: ICartService
     {
         //In future, we can add new product pack AND\OR promotion type here based on business need.
-        AProdPromotion APromoPack = new AProdPromotion();
-        BProdPromotion BPromoPack = new BProdPromotion();
-        CProductPack CPack = new CProductPack();
-        DProductPack DPack = new DProductPack();
+        IProductPack APromoPack;
+        IProductPack BPromoPack;
+        IProductPack CPack;
+        IProductPack DPack;
+
+        public CartService() 
+        {
+            APromoPack = ProductFactory.GetProductPack("A");
+            BPromoPack = ProductFactory.GetProductPack("B");
+            CPack = ProductFactory.GetProductPack("C");
+            DPack = ProductFactory.GetProductPack("D");
+        }
 
         //Adding the products to order list with their Count and Price values, based upon SKU Id value.
         public void AddProduct(Product prod)
         {
             switch (prod.Id)
             {
-                case "A":
+                case "A":                    
                     APromoPack.ProductCount++;
                     APromoPack.ProductPrice = 50m;
                     break;
-                case "B":
+                case "B":                    
                     BPromoPack.ProductCount++;
                     BPromoPack.ProductPrice = 30m;
                     break;
